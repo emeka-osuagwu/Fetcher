@@ -57,7 +57,7 @@ or
 $ composer test
 ```
 # Security
-f you discover any security related issues, please email <a href = "emekaosuagwuandela@gmail.com">emekaosuagwuandela@gmail.com</a> or <a href = "https://twitter.com/dev_emeka">@dev_emeka</a>instead of using the issue tracker.
+f you discover any security related issues, please email <a href = "emekaosuagwuandela@gmail.com">emekaosuagwuandela@gmail.com</a> or <a href = "https://twitter.com/dev_emeka">@dev_emeka</a> instead of using the issue tracker.
 
 # Credit
 ###Emeka Osuagwu
