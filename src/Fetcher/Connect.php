@@ -5,10 +5,13 @@ namespace Emeka\Fetcher\Fetcher;
 use PDO;
 use Emeka\Fetcher\Fetcher\Driver;
 
-
+/*
+| Driver create and returns database connection
+*/
 class Connect extends Driver
 {
     protected $getDriver;
+
     protected $db_connection;
 
     protected function getDriver()

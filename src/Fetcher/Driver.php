@@ -6,12 +6,12 @@ use Emeka\Fetcher\Fetcher\Setup;
 
 class Driver
 {
-    public $db_name;
-    public $db_user;
-    public $database;
-    public $driver;
-    public $db_host;
-    public $db_password;
+    protected $db_name;
+    protected $db_user;
+    protected $database;
+    protected $driver;
+    protected $db_host;
+    protected $db_password;
 
     public function __construct ()
     {

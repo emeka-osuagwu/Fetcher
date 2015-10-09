@@ -6,11 +6,11 @@ use Dotenv\Dotenv;
 
 class Setup
 {
-    public $db_host;
-    public $db_name;
-    public $db_user;
-    public $database;
-    public $db_password;
+    protected $db_host;
+    protected $db_name;
+    protected $db_user;
+    protected $database;
+    protected $db_password;
 
     public function __construct ()
     {
@@ -23,27 +23,49 @@ class Setup
         $this->db_password  = getenv('db_password');
     }
 
-
+    /*
+    | getDatabase returns database
+    | return @string
+    */
     public function getDatabase()
     {
         return $this->database;
     }
 
+    /*
+    | getDatabaseName returns database name
+    | return @string
+    */
     public function getDatabaseName()
     {
         return $this->db_name;
     }
 
+
+    /*
+    | getDatabaseUser returns database user
+    | return @string
+    */
     public function getDatabaseUser()
     {
         return $this->db_user;
     }
 
+
+    /*
+    | getDatabasePassword returns database password
+    | return @string
+    */
     public function getDatabasePassword()
     {
         return $this->db_password;
     }
 
+
+    /*
+    | getDatabaseHost returns database host
+    | return @string
+    */
     public function getDatabaseHost()
     {
         return $this->db_host;
