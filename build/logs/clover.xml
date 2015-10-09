@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1444405106">
+  <project timestamp="1444405106">
+    <package name="Emeka\Fetcher\Fetcher">
+      <file name="/home/emeka/Documents/.Project/php/package/driver/src/Fetcher/Connect.php">
+        <class name="Connect" namespace="Emeka\Fetcher\Fetcher">
+          <metrics methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        </class>
+        <line num="14" type="method" name="getDriver" crap="1" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="19" type="method" name="connect" crap="1" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <metrics loc="39" ncloc="39" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/home/emeka/Documents/.Project/php/package/driver/src/Fetcher/Driver.php">
+        <class name="Driver" namespace="Emeka\Fetcher\Fetcher">
+          <metrics methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
+        </class>
+        <line num="16" type="method" name="__construct" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="31" type="method" name="driver" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="47" type="method" name="useDriver" crap="1" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <metrics loc="51" ncloc="44" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/home/emeka/Documents/.Project/php/package/driver/src/Fetcher/Fetch.php">
+        <class name="Fetch" namespace="Emeka\Fetcher\Fetcher">
+          <metrics methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
+        </class>
+        <line num="12" type="method" name="__construct" crap="1" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="18" type="method" name="fetchData" crap="2.02" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
+      </file>
+      <file name="/home/emeka/Documents/.Project/php/package/driver/src/Fetcher/Setup.php">
+        <class name="Setup" namespace="Emeka\Fetcher\Fetcher">
+          <metrics methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="19" coveredelements="19"/>
+        </class>
+        <line num="15" type="method" name="__construct" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="27" type="method" name="getDatabase" crap="1" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="32" type="method" name="getDatabaseName" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="37" type="method" name="getDatabaseUser" crap="1" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="42" type="method" name="getDatabasePassword" crap="1" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="47" type="method" name="getDatabaseHost" crap="1" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <metrics loc="55" ncloc="55" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="19" coveredelements="19"/>
+      </file>
+    </package>
+    <metrics files="4" loc="174" ncloc="167" classes="4" methods="13" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="50" coveredstatements="49" elements="63" coveredelements="61"/>
+  </project>
+</coverage>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test\ExampleTest" file="/home/emeka/Documents/.Project/php/package/driver/tests/FetchData.php" tests="1" assertions="1" failures="0" errors="0" time="0.023596">
+    <testcase name="test_Fetch_return_array" class="Test\ExampleTest" file="/home/emeka/Documents/.Project/php/package/driver/tests/FetchData.php" line="11" assertions="1" time="0.023596"/>
+  </testsuite>
+</testsuites>
