@@ -9,7 +9,7 @@ Fetcher is a super light weight PHP database driver, that helps you sync and fet
 # Install
 Via Composer
 
-To add open-source-evangelist as a dependency, run the following in your project directory.
+To add open-source-fetcher as a dependency, run the following in your project directory.
 
 ```php
 $ composer install emeka/fetcher
@@ -57,7 +57,7 @@ or
 $ composer test
 ```
 # Security
-f you discover any security related issues, please email <a href = "emekaosuagwuandela@gmail.com">emekaosuagwuandela@gmail.com</a> instead of using the issue tracker.
+f you discover any security related issues, please email <a href = "emekaosuagwuandela@gmail.com">emekaosuagwuandela@gmail.com</a> or <a href = "https://twitter.com/dev_emeka">@dev_emeka</a>instead of using the issue tracker.
 
 # Credit
 ###Emeka Osuagwu
