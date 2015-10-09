@@ -1,5 +1,5 @@
 {
-    "name": "emeka/sweetemoji",
+    "name": "emeka/fetcher",
     "description": "Fetcher is a super light weight PHP library that helps sycn and fetch data from your PDO database in your application",
     "type": "PHP",
     "license": "MIT",
