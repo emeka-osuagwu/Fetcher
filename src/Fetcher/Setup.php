@@ -14,7 +14,7 @@ class Setup
 
     public function __construct ()
     {
-        $dotenv = new Dotenv(__DIR__ . "/../../" );
+        $dotenv = new Dotenv($_SERVER['DOCUMENT_ROOT']);
         $dotenv->load();
         $this->db_host      = getenv('db_host');
         $this->db_name      = getenv('db_name');
