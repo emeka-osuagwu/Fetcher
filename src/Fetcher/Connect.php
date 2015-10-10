@@ -10,8 +10,6 @@ use Emeka\Fetcher\Fetcher\Driver;
 */
 class Connect extends Driver
 {
-    protected $getDriver;
-
     protected $db_connection;
 
     protected function getDriver()
