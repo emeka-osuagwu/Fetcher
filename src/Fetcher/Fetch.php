@@ -55,5 +55,4 @@ class Fetch
     {
         return $this->prepare_data->fetch(PDO::FETCH_OBJ);
     }
-
 }
