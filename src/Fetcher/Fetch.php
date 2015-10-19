@@ -14,22 +14,31 @@ class Fetch
         $this->query            = $query;
         $connection             = new Connect;
         $this->db_connection    = $connection->connect();
-        $this->prepare_data     = $this->prepareData($this->query);
+        $this->prepare_data     = $this->prepareData();
     }
 
     /*
     | prepareData checks for connetion and execute the query
     */
-    public function prepareData($query)
+    protected function prepareData()
     {
 
         if ( ! $this->db_connection )
         {
             return "Error : Unable to open database\n";
         }
-        $data = $this->db_connection->prepare($query);
+        $data = $this->db_connection->prepare($this->query);
         $data->execute();
         return $data;
+    }
+
+    /*
+    | fetchAll of the remaining rows in the result set 
+    */
+    public function fetchAll()
+    {
+        $result = $this->prepare_data->fetchAll();
+        return $this->toJson($result); 
     }
 
     /*
@@ -37,7 +46,8 @@ class Fetch
     */
     public function fetchLazy()
     {
-        return $this->prepare_data->fetch(PDO::FETCH_LAZY);
+        $result = $this->prepare_data->fetch(PDO::FETCH_LAZY);
+        return $this->toJson($result);
     }
 
     /*
@@ -45,7 +55,8 @@ class Fetch
     */
     public function fetchAssoc()
     {
-        return $this->prepare_data->fetch(PDO::FETCH_ASSOC);
+        $result = $this->prepare_data->fetchAll(PDO::FETCH_ASSOC);
+        return $this->toJson($result);
     }
 
     /*
@@ -53,6 +64,37 @@ class Fetch
     */
     public function fetchObj()
     {
-        return $this->prepare_data->fetch(PDO::FETCH_OBJ);
+        $result =  $this->prepare_data->fetchAll(PDO::FETCH_OBJ);
+        return $this->toJson($result);
+    }  
+
+
+    /*
+    | fetchColumn Return next row as an array indexed by column name Array
+    */
+    public function fetchColumn($column)
+    {
+        $result = $this->prepare_data->fetchAll(PDO::FETCH_COLUMN, $column);
+        return $this->toJson($result);
     }
+
+    /*
+    | fetchGroup fetch group values by the first column
+    */
+    public function fetchGroup()
+    {
+        $result = $this->prepare_data->fetchAll(PDO::FETCH_COLUMN|PDO::FETCH_GROUP);
+        return $this->toJson($result);
+    }
+
+    /*
+    | toJson returns json_encode($object)
+    */
+    public function toJson( $object )
+    {
+        return json_encode($object);
+    }
+
+
+
 }
