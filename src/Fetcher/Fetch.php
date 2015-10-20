@@ -4,32 +4,49 @@ namespace Emeka\Fetcher\Fetcher;
 
 use PDO;
 use Emeka\Fetcher\Fetcher\Driver;
-
+use Emeka\Fetcher\Exception\InvalidException;
 
 class Fetch
 {
+    protected $query;
 
-    public function __construct ( $query ) 
+    public function __construct () 
     {
-        $this->query            = $query;
         $connection             = new Connect;
         $this->db_connection    = $connection->connect();
-        $this->prepare_data     = $this->prepareData();
+    }
+
+    /*
+    | query 
+    */
+    public function query( $query )
+    {
+        return $this->query = $query;
     }
 
     /*
     | prepareData checks for connetion and execute the query
     */
-    protected function prepareData()
+    public function prepareData()
     {
-
-        if ( ! $this->db_connection )
-        {
-            return "Error : Unable to open database\n";
-        }
         $data = $this->db_connection->prepare($this->query);
-        $data->execute();
-        return $data;
+        
+        if ( $data->execute() ) 
+        {
+            return $data;      
+        }  
+
+        $response = 
+        [
+            "Message"   => "Invalid query",
+            "Tip"       => 
+            [
+                "1"     => "use method query() on instance of Fetch",
+                "2"     => "check if query parameter is accurate with database infomation"
+            ]   
+        ];
+
+        die( json_encode($response));   
     }
 
     /*
@@ -37,7 +54,7 @@ class Fetch
     */
     public function fetchAll()
     {
-        $result = $this->prepare_data->fetchAll();
+        $result = $this->prepareData()->fetchAll();
         return $this->toJson($result); 
     }
 
@@ -46,7 +63,7 @@ class Fetch
     */
     public function fetchLazy()
     {
-        $result = $this->prepare_data->fetch(PDO::FETCH_LAZY);
+        $result = $this->prepareData()->fetch(PDO::FETCH_LAZY);
         return $this->toJson($result);
     }
 
@@ -55,7 +72,7 @@ class Fetch
     */
     public function fetchAssoc()
     {
-        $result = $this->prepare_data->fetchAll(PDO::FETCH_ASSOC);
+        $result = $this->prepareData()->fetchAll(PDO::FETCH_ASSOC);
         return $this->toJson($result);
     }
 
@@ -64,7 +81,7 @@ class Fetch
     */
     public function fetchObj()
     {
-        $result =  $this->prepare_data->fetchAll(PDO::FETCH_OBJ);
+        $result =  $this->prepareData()->fetchAll(PDO::FETCH_OBJ);
         return $this->toJson($result);
     }  
 
@@ -74,7 +91,7 @@ class Fetch
     */
     public function fetchColumn($column)
     {
-        $result = $this->prepare_data->fetchAll(PDO::FETCH_COLUMN, $column);
+        $result = $this->prepareData()->fetchAll(PDO::FETCH_COLUMN, $column);
         return $this->toJson($result);
     }
 
@@ -83,7 +100,7 @@ class Fetch
     */
     public function fetchGroup()
     {
-        $result = $this->prepare_data->fetchAll(PDO::FETCH_COLUMN|PDO::FETCH_GROUP);
+        $result = $this->prepareData()->fetchAll(PDO::FETCH_COLUMN|PDO::FETCH_GROUP);
         return $this->toJson($result);
     }
 
@@ -94,7 +111,6 @@ class Fetch
     {
         return json_encode($object);
     }
-
 
 
 }
