@@ -39,7 +39,8 @@ Then add the following
 
 ```
 use Emeka\Fetcher\Fetcher\Fetch;
-$fetcher = new Fetch('Select * from posts');
+$fetcher = new Fetch();
+$fetch->query('Select * from posts');
 echo $fetcher->fetchObj();
 echo $fetcher->fetchLazy();
 echo $fetcher->fetchBoth();
