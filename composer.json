@@ -1,0 +1,49 @@
+{
+    "name": "emeka/fetcher",
+    "description": "Fetcher is a super light weight ORM , that helps you perform basic CRUD operations in your application.",
+    "type": "PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emeka Osuagwu",
+            "email": "emekaosuagwuandela@gmail.com",
+            "homepage": "https://github.com/andela-eosuagwu/SweetEmoji",
+            "role": "Software Developer"
+        }
+    ],
+    "keywords": [
+        "fetcher",
+        "sycn database",
+        "PHP ORM",
+        "fetch pdo"
+        "pdo drive",
+        "Simple ORM",
+        "PHP BASIC CRUD",
+        "database driver",
+        "php database driver"
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "vlucas/phpdotenv": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Emeka\\Fetcher\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+
+
+
+}
