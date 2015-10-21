@@ -10,6 +10,7 @@ php:
 # See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
 sudo: true
 
+
 matrix:
   allow_failures:
     - php: 7.0

@@ -1,6 +1,6 @@
 {
     "name": "emeka/fetcher",
-    "description": "Fetcher is a super light weight ORM , that helps you perform basic CRUD operations in your application.",
+    "description": "Fetcher is a super light weight PHP database driver, that helps you sync and fetch data from any PDO database in your application.",
     "type": "PHP",
     "license": "MIT",
     "authors": [
@@ -35,15 +35,15 @@
             "Emeka\\Fetcher\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
+    "autoload-dev": 
+    {
+        "psr-4": 
+        {
             "Test\\": "tests/"
         }
     },
-    "scripts": {
+    "scripts": 
+    {
         "test": "phpunit"
     }
-
-
-
 }
