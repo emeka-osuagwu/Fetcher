@@ -37,7 +37,7 @@
     {
         "psr-4": 
         {
-            "Emeka\\Fetcher\\": "src"
+            "Emeka\\": "src"
         }
     },
     "autoload-dev": 
