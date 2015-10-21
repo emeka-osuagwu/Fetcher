@@ -15,6 +15,6 @@ class Get extends Connect
     public function getAll( $table )
     {
         $query = "SELECT * FROM $table";
-        echo json_encode($this->fetchData( $query ));
+        return json_encode($this->fetchData( $query ));
     }
 }
